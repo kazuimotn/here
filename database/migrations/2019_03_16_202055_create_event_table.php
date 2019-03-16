@@ -18,7 +18,8 @@ class CreateEventTable extends Migration
             $table->double('longitude');  //緯度
             $table->double('latitude');   //経度
             $table->integer('user_id');   //ユーザーid
-            $table->integer('when');     //何時からか
+            $table->string('user_name');   //ユーザー名前
+            $table->integer('start_time');     //何時からか
             $table->timestamps();         //登録日時
         });
     }

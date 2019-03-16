@@ -24,10 +24,17 @@ class EventController extends Controller
       $event->fill($form);
       //ログインしているユーザーのidを取得し
       $event->user_id = $id = Auth::id();
+      $event->user_id = $id = Auth::user()->name;
       //$patocall->wether_valid =1;
       $event->save();
 
-      return redirect('/home');
+      $id = Event::where(id=$event->id)->first();
+      if($id){
+        $event = Event::all();
+        return $event;
+      }else {
+        return redirect('/home');
+      }
     }
 
 }
