@@ -28,7 +28,7 @@ class EventController extends Controller
       //$patocall->wether_valid =1;
       $event->save();
 
-      $id = Event::where(id=$event->id)->first();
+      $id = Event::where(id == $event->id)->first();
       if($id){
         $event = Event::all();
         return $event;
