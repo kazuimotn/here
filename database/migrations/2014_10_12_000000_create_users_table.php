@@ -16,7 +16,7 @@ class CreateUsersTable extends Migration
         Schema::create('facebooo', function (Blueprint $table) {
           $table->increments('id');
           $table->string('name');
-          $table->string('email,191')->unique()->nullable();
+          $table->string('email',191)->unique()->nullable();
           $table->string('prof_image')->default('imag.png');   //デフォルトを設定しておく必要あり
           $table->year('birth_year')->nullable();
           $table->integer('birth_month')->nullable();
