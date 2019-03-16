@@ -23,4 +23,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 //ゲストのログイン
 Route::get('login/{provider}',          'Auth\SocialAccountController@redirectToProvider');
 //callback
-Route::get('callback', 'Auth\SocialAccountController@handleProviderCallback');
+Route::get('/callback', 'Auth\SocialAccountController@handleProviderCallback');
