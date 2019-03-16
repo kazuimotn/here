@@ -26,13 +26,13 @@ class SocialAccountController extends Controller
            return redirect('/login');
        }
        // return $authUser;
-       // $authUser = $accountService->findOrCreate(
-       //     $user,
-       //     $provider
-       // );
+       $authUser = $accountService->findOrCreate(
+           $user,
+           $provider
+       );
 
 
-       //auth()->guard('user')->login($authUser, true);
+       auth()->guard('user')->login($authUser, true);
       return redirect()->to('/home');
 
    }
