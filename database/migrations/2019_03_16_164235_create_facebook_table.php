@@ -13,7 +13,7 @@ class CreateFacebookTable extends Migration
      */
     public function up()
     {
-        Schema::create('facebook', function (Blueprint $table) {
+        Schema::create('face', function (Blueprint $table) {
           $table->increments('id');
           $table->string('name');
           $table->string('email',191)->unique()->nullable();
@@ -39,6 +39,6 @@ class CreateFacebookTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('facebook');
+        Schema::dropIfExists('face');
     }
 }
