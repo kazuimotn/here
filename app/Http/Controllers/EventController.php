@@ -28,13 +28,13 @@ class EventController extends Controller
       //$patocall->wether_valid =1;
       $event->save();
 
-      $ids = Event::where('id' == $event->id)->first();
-      if($ids){
+      // $ids = Event::where('id' == $event->id)->first();
+      // if($ids){
         $event = Event::all();
         return $event;
-      }else {
-        return redirect('/home');
-      }
+      // }else {
+      //   return redirect('/home');
+      // }
     }
 
 }
