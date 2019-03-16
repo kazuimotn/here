@@ -23,7 +23,6 @@ class CreateFacebookTable extends Migration
           $table->integer('birth_day')->nullable();
           $table->integer('point')->default(0);
           $table->integer('sex')->nullable();
-          $table->string('cast_or_gest')->nullable();
           $table->timestamp('email_verified_at')->nullable();
           $table->string('password')->nullable();
           $table->rememberToken();

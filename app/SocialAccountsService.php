@@ -30,7 +30,6 @@ class SocialAccountsService
               $user = User::create([
                   'email' => $providerUser->getEmail(),
                   'name'  => $providerUser->getName(),
-                  'cast_or_gest' =>$value,
                       ]);
               }
           //リレーションを持たせてcreateする。
@@ -40,7 +39,7 @@ class SocialAccountsService
                   ]);
           //返り値としてユーザーを返す。
               return $user;
-              }          
+              }
 
       }
 }
