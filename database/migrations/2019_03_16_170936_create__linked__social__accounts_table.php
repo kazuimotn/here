@@ -17,7 +17,7 @@ class CreateLinkedSocialAccountsTable extends Migration
           $table->increments('id');
           $table->bigInteger('user_id');   //
           $table->string('provider_name')->nullable();  //プロバイダー名
-          $table->string('provider_id')->unique()->nullable();  //プロバイダーに登録されているユーザーid
+          $table->string('provider_id',191)->unique()->nullable();  //プロバイダーに登録されているユーザーid
           $table->timestamps();
         });
     }
