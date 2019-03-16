@@ -25,6 +25,6 @@ Route::get('login/{provider}',          'Auth\SocialAccountController@redirectTo
 //callback
 Route::get('login/{provider}/callback', 'Auth\SocialAccountController@handleProviderCallback');
 
-// Route::get('login/{provider}/callback',function () {
-//     return 'Hello World';
-// });
+//イベントの追加
+Route::get('/event/create', 'EventController@create');
+Route::post('/event/index', 'EventController@index');

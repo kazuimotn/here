@@ -18,6 +18,13 @@
                 </div>
             </div>
         </div>
+        <form name="resisterform" action="/event/create" method="post">
+	           {{csrf_field()}}
+	            緯度:<input type="text" name="longitude"><br />
+	            経度:<input type="text" name="latitude" ><br />
+              何時間から？:<input type="text" name="when" ><br />
+	        <button type="submit" name="action" value="send">送信</button>
+        </form>
     </div>
 </div>
 @endsection
