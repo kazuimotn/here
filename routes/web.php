@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//認証系のルート定義
+//ゲストのログイン
+Route::get('login/{provider}',          'Auth\SocialAccountController@redirectToProvider');
+//callback
+Route::get('login/{provider}/callback', 'Auth\SocialAccountController@handleProviderCallback');

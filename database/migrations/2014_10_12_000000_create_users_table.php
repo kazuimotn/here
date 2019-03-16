@@ -14,13 +14,20 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('faceboo', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('name');
-            //$table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
+          $table->increments('id');
+          $table->string('name');
+          $table->string('email')->unique()->nullable();
+          $table->string('prof_image')->default('imag.png');   //デフォルトを設定しておく必要あり
+          $table->year('birth_year')->nullable();
+          $table->integer('birth_month')->nullable();
+          $table->integer('birth_day')->nullable();
+          $table->integer('point')->default(0);
+          $table->integer('sex')->nullable();
+          $table->string('cast_or_gest')->nullable();
+          $table->timestamp('email_verified_at')->nullable();
+          $table->string('password')->nullable();
+          $table->rememberToken();
+          $table->timestamps();
         });
     }
 

@@ -44,4 +44,10 @@ return [
         ],
     ],
 
+    'facebook' => [
+      'client_id' => "574649656366248",                        // GitHubのClient ID
+      'client_secret' => "573c027abef67d3f2055bedae73b515d",   // GitHubのClient Secret
+      'redirect' => 'https://hereeee.herokuapp.com/callback',
+    ],
+
 ];
