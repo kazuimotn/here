@@ -64,6 +64,7 @@
                                 @endif
                             </div>
                         </div>
+                        <a href="/login/facebook"  class="btn btn-default btn-md">Facebookでログイン</a>
                     </form>
                 </div>
             </div>
