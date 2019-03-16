@@ -26,5 +26,5 @@ Route::get('login/{provider}',          'Auth\SocialAccountController@redirectTo
 Route::get('login/{provider}/callback', 'Auth\SocialAccountController@handleProviderCallback');
 
 //イベントの追加
-Route::get('/event/create', 'EventController@create');
-Route::post('/event/index', 'EventController@index');
+Route::post('/event/create', 'EventController@create');
+Route::get('/event/index', 'EventController@index');
