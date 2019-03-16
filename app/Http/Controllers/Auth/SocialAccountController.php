@@ -19,7 +19,7 @@ class SocialAccountController extends Controller
    //callbackされてログインするとこ
    public function handleProviderCallback(\App\SocialAccountsService $accountService, $provider)
    {
-     return 3;
+
        try {
            $user = \Socialite::driver($provider)->user();//こいつはオブジェクト
        } catch (\Exception $e) {
@@ -30,7 +30,7 @@ class SocialAccountController extends Controller
            $user,
            $provider
        );
-
+       return $authUser;
 
        auth()->guard('user')->login($authUser, true);
       return redirect()->to('/home');
