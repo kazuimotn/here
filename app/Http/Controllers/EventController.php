@@ -23,8 +23,8 @@ class EventController extends Controller
       //unset($form['_token']);
       $event->fill($form);
       //ログインしているユーザーのidを取得し
-      $event->user_id = $id = Auth::id();
-      $event->user_name = $id = Auth::user()->name;
+      $event->user_id = Auth::id();
+      $event->user_name = Auth::user()->name;
       //$patocall->wether_valid =1;
       $event->save();
 
