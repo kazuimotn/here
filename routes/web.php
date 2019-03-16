@@ -23,8 +23,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 //ゲストのログイン
 Route::get('login/{provider}',          'Auth\SocialAccountController@redirectToProvider');
 //callback
-//Route::get('login/{provider}/callback', 'Auth\SocialAccountController@handleProviderCallback');
+Route::get('login/{provider}/callback', 'Auth\SocialAccountController@handleProviderCallback');
 
-Route::get('login/{provider}/callback',function () {
-    return 'Hello World';
-});
+// Route::get('login/{provider}/callback',function () {
+//     return 'Hello World';
+// });
