@@ -19,7 +19,6 @@ class SocialAccountController extends Controller
    //callbackされてログインするとこ
    public function handleProviderCallback(\App\SocialAccountsService $accountService, $provider)
    {
-     return 3;
        try {
            $user = \Socialite::driver($provider)->user();//こいつはオブジェクト
        } catch (\Exception $e) {
