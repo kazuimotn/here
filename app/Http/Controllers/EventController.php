@@ -24,7 +24,7 @@ class EventController extends Controller
       $event->fill($form);
       //ログインしているユーザーのidを取得し
       $event->user_id = $id = Auth::id();
-      $event->user_id = $id = Auth::user()->name;
+      $event->user_name = $id = Auth::user()->name;
       //$patocall->wether_valid =1;
       $event->save();
 
