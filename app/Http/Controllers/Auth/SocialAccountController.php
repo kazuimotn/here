@@ -32,7 +32,7 @@ class SocialAccountController extends Controller
        );
 
 
-       auth()->guard('users')->login($authUser, true);
+       auth()->login($authUser, true);
       return redirect()->to('/home');
 
    }
