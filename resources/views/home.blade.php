@@ -25,6 +25,7 @@
               何時間から？:<input type="text" name="start_time" ><br />
 	        <button type="submit" name="action" value="send">送信</button>
         </form>
+        <a href="/event/index">イベント一覧</a>
     </div>
 </div>
 @endsection
