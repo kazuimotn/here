@@ -5,12 +5,19 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Event;
 use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
 
 class EventController extends Controller
 {
     //一覧取得
     public function index(Request $request)
     {
+      //時間で検索をかける．現在時間の取得を行い、+-12時間のもののみを取得し返す．
+      //現在時刻の取得
+      // $dt = Carbon::now();
+      // // 日
+      // $dt1->diffInDays($dt2); // 244日
+      // $event = Event::where('start_time','>=',$dt)->get();
       $event = Event::all();
       return $event;
     }
